@@ -209,7 +209,7 @@ p {
 
 .hero-title {
     font-family: 'Caveat', cursive;
-    font-size: clamp(5rem, 10vw, 12rem);
+    font-size: clamp(4rem, 8vw, 9rem);
     margin-bottom: 0rem; /* Pull up next item */
     line-height: 1;
     color: var(--text-dark);
@@ -225,28 +225,30 @@ p {
     width: 45%;
     max-width: 500px;
     z-index: 1;
+    transform: rotate(5deg);
     transition: transform 0.4s ease, z-index 0s;
 }
 
 .hero-photo-container:hover {
     z-index: 3; /* Pull photo over text on hover */
-    transform: scale(1.02);
+    transform: rotate(3deg) scale(1.02);
 }
 
 .photo-backdrop {
     position: absolute;
     bottom: -5%;
-    right: -5%;
+    right: -8%;
     width: 100%;
     height: 100%;
     background-color: var(--p-blue);
     border-radius: 40px;
     z-index: -1;
+    transform: rotate(-8deg); /* Contrasting tilt */
     transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .hero-photo-container:hover .photo-backdrop {
-    transform: scale(1.05);
+    transform: rotate(0deg) scale(1.05);
     background-color: var(--p-pink);
 }
 
