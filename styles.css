@@ -201,9 +201,8 @@ p {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--text-muted);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: inline-block;
-    transform: rotate(2deg) translateX(4vw); /* Wild non-aligned detail */
 }
 
 .hero-title {
@@ -213,11 +212,8 @@ p {
     line-height: 1;
     color: var(--text-dark);
     display: inline-block;
-    transform: rotate(-3deg); /* Handwriting tilt */
-    transform-origin: left center;
 }
 
-/* User Photo Collage Styling */
 .hero-photo-container {
     position: absolute;
     top: 5vh;
@@ -225,30 +221,28 @@ p {
     width: 45%;
     max-width: 500px;
     z-index: 1;
-    transform: rotate(5deg);
     transition: transform 0.4s ease, z-index 0s;
 }
 
 .hero-photo-container:hover {
     z-index: 3; /* Pull photo over text on hover */
-    transform: rotate(3deg) scale(1.02);
+    transform: scale(1.02);
 }
 
 .photo-backdrop {
     position: absolute;
     bottom: -5%;
-    right: -8%;
+    right: -5%;
     width: 100%;
     height: 100%;
     background-color: var(--p-blue);
     border-radius: 40px;
     z-index: -1;
-    transform: rotate(-8deg); /* Contrasting tilt */
     transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .hero-photo-container:hover .photo-backdrop {
-    transform: rotate(0deg) scale(1.05);
+    transform: scale(1.05);
     background-color: var(--p-pink);
 }
 
@@ -290,12 +284,8 @@ p {
 }
 
 /* Scatter the stat cards for wild vibe */
-.stat-item:nth-child(1) { transform: rotate(-4deg) translateY(10px); }
-.stat-item:nth-child(2) { transform: rotate(3deg) translateY(-5px); }
-.stat-item:nth-child(3) { transform: rotate(-2deg) translateX(10px); }
-
 .stat-item:hover {
-    transform: scale(1.05) rotate(0deg);
+    transform: scale(1.05);
 }
 
 .stat-num {
@@ -324,8 +314,9 @@ p {
     background-color: var(--text-dark);
     color: var(--bg-base);
     border-radius: 40px;
-    margin: 5vh 2vw;
-    min-height: 90vh;
+    margin: 2vh 2vw;
+    padding: 10vh 5vw;
+    min-height: 70vh;
 }
 
 .massive-statement {
@@ -360,8 +351,8 @@ p {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 5vw;
-    padding: 20vh 10vw 10vh 10vw;
+    gap: 3vw;
+    padding: 15vh 5vw 10vh 5vw;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -420,16 +411,17 @@ p {
 /* --- S4: Experience & Education (Split) --- */
 .experience-section {
     background-color: #fce1e4; /* Light pink base flow */
-    margin: 5vh 2vw;
+    margin: 2vh 2vw;
     border-radius: 40px;
-    padding: 10vh 5vw;
+    padding: 8vh 5vw;
 }
 
 .split-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5vw;
+    gap: 4vw;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .split-heading {
@@ -583,11 +575,11 @@ p {
         width: 100%;
     }
     .hero-title {
-        transform: rotate(-2deg);
+        transform: rotate(0deg);
         transform-origin: center;
     }
     .hero-intro-large {
-        transform: rotate(1deg);
+        transform: rotate(0deg);
     }
     .hero-photo-container {
         position: relative;
@@ -595,7 +587,7 @@ p {
         right: 0;
         width: 80%;
         margin: 4rem auto;
-        transform: rotate(2deg);
+        transform: rotate(0deg);
     }
     .split-layout {
         grid-template-columns: 1fr;
