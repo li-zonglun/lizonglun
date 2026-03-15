@@ -203,6 +203,7 @@ p {
     color: var(--text-muted);
     margin-bottom: 2rem;
     display: inline-block;
+    transform: rotate(2deg) translateX(2vw);
 }
 
 .hero-title {
@@ -212,6 +213,8 @@ p {
     line-height: 1;
     color: var(--text-dark);
     display: inline-block;
+    transform: rotate(-3deg);
+    transform-origin: left center;
 }
 
 .hero-photo-container {
@@ -340,11 +343,11 @@ p {
 }
 
 .sticky-heading {
-    position: absolute;
-    top: 5vh;
-    left: 10vw;
+    position: relative;
+    padding-left: 10vw;
     font-size: clamp(2rem, 4vw, 3rem);
     z-index: 10;
+    margin-bottom: 2rem;
 }
 
 .native-horizontal-scroll {
@@ -352,7 +355,7 @@ p {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 3vw;
-    padding: 15vh 5vw 10vh 5vw;
+    padding: 2vh 5vw 10vh 5vw;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -575,11 +578,11 @@ p {
         width: 100%;
     }
     .hero-title {
-        transform: rotate(0deg);
+        transform: rotate(-2deg);
         transform-origin: center;
     }
     .hero-intro-large {
-        transform: rotate(0deg);
+        transform: rotate(1deg);
     }
     .hero-photo-container {
         position: relative;
