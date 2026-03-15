@@ -35,8 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Logic 
-    const horizontalScrollContainer = document.getElementById('horizontal-scroll');
+    const horizontalScrollContainer = document.querySelector('.native-horizontal-scroll');
     const projectsSection = document.getElementById('projects');
+
+    if (horizontalScrollContainer) {
+        // Center the horizontal scroll on load
+        const centerPosition = (horizontalScrollContainer.scrollWidth - horizontalScrollContainer.clientWidth) / 2;
+        horizontalScrollContainer.scrollLeft = centerPosition;
+    }
 
     // Scroll Reveal Elements
     const observer = new IntersectionObserver((entries) => {

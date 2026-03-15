@@ -187,6 +187,7 @@ p {
     display: flex;
     min-height: 70vh;
     align-items: center;
+    padding-left: 2vw; /* Start with a slight offset */
 }
 
 .hero-text-content {
@@ -203,17 +204,17 @@ p {
     color: var(--text-muted);
     margin-bottom: 2rem;
     display: inline-block;
-    transform: rotate(2deg) translateX(2vw);
+    transform: rotate(4deg) translate(8vw, -2rem); /* Extreme left shift, and slight overlap */
 }
 
 .hero-title {
     font-family: 'Caveat', cursive;
     font-size: clamp(5rem, 10vw, 12rem);
-    margin-bottom: 2rem;
+    margin-bottom: 0rem; /* Pull up next item */
     line-height: 1;
     color: var(--text-dark);
     display: inline-block;
-    transform: rotate(-3deg);
+    transform: rotate(-6deg) translateX(-2vw); /* Pull to the left out of alignment */
     transform-origin: left center;
 }
 
@@ -578,11 +579,12 @@ p {
         width: 100%;
     }
     .hero-title {
-        transform: rotate(-2deg);
+        transform: rotate(-3deg) translateX(0); /* Less extreme on mobile */
         transform-origin: center;
+        margin-bottom: 1rem;
     }
     .hero-intro-large {
-        transform: rotate(1deg);
+        transform: rotate(2deg) translate(2vw, -1rem); /* Less extreme on mobile */
     }
     .hero-photo-container {
         position: relative;
